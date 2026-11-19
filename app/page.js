@@ -137,12 +137,12 @@ function Discover() {
 }
 
 export default function Page() {
-  const [tab, setTab] = useState('discover');
+  const [tab, setTab] = useState('home');
   return (
     <main>
       <header><span className="logo">coy<i /></span></header>
       <div className="body">
-        {tab === 'home' ? null : <Discover />}
+        {tab === 'discover' ? <Discover /> : null}
       </div>
       <nav className="tabs">
         <button className={tab === 'home' ? 'on' : ''} onClick={() => setTab('home')}>Home</button>
